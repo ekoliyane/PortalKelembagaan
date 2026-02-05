@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal BKK Kelembagaan 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tab-active { background-color: #1e3a8a; color: white; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+    <!-- Header Sederhana -->
+    <header class="bg-blue-900 text-white py-12 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Portal BKK Kelembagaan 2026</h1>
+            <p class="text-blue-200 mt-3 text-lg">Asistensi Percepatan Pelaporan & Pelaksanaan Dana Keistimewaan</p>
+            
+            <div class="mt-8 inline-block bg-yellow-400 text-blue-900 px-6 py-3 rounded-2xl shadow-xl">
+                <p class="text-sm font-bold uppercase tracking-wider">Deadline Pengumpulan LPJ 2025 & KENES</p>
+                <p class="text-3xl font-black">Senin, 9 Februari 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <main class="max-w-5xl mx-auto p-6 -mt-8">
+        
+        <!-- Navigasi Simpel -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button onclick="showSection('ringkasan')" id="btn-ringkasan" class="tab-active px-6 py-2 rounded-full font-semibold shadow-sm transition-all border border-blue-900">Ringkasan Rapat</button>
+            <button onclick="showSection('data')" id="btn-data" class="bg-white px-6 py-2 rounded-full font-semibold shadow-sm transition-all border border-gray-300 hover:bg-gray-50">Data Progres</button>
+            <button onclick="showSection('unduh')" id="btn-unduh" class="bg-white px-6 py-2 rounded-full font-semibold shadow-sm transition-all border border-gray-300 hover:bg-gray-50 text-blue-700">Unduh Berkas <i class="fas fa-download ml-1"></i></button>
+        </div>
+
+        <!-- Section: Ringkasan -->
+        <div id="sec-ringkasan" class="section-content space-y-6">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h2 class="text-2xl font-bold mb-6 text-blue-900 flex items-center"><i class="fas fa-clipboard-list mr-3 text-blue-500"></i> Poin Kesepakatan Strategis</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="bg-green-100 text-green-600 p-1 rounded-md mr-3 mt-1"><i class="fas fa-check text-xs"></i></span>
+                            <span><strong>Penyamaan Nalar Juknis:</strong> Penyeragaman pemahaman terkait standar proposal, RAB, dan indikator output untuk seluruh wilayah agar selaras dengan visi Keistimewaan.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-green-100 text-green-600 p-1 rounded-md mr-3 mt-1"><i class="fas fa-check text-xs"></i></span>
+                            <span><strong>Peningkatan Kapasitas:</strong> Segera dilakukan sosialisasi intensif dan asistensi teknis untuk memperkuat SDM di tingkat Kapanewon dan Kalurahan.</span>
+                        </li>
+                    </ul>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="bg-green-100 text-green-600 p-1 rounded-md mr-3 mt-1"><i class="fas fa-check text-xs"></i></span>
+                            <span><strong>Akses KENES Berjenjang:</strong> Usulan pemberian akses (view/verifikasi) bagi OPD pendamping guna pemantauan <i>real-time</i> progres di lapangan.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-green-100 text-green-600 p-1 rounded-md mr-3 mt-1"><i class="fas fa-check text-xs"></i></span>
+                            <span><strong>Ketentuan LPJ:</strong> Sesuai Juknis Reforkal, LPJ akhir tidak perlu melampirkan bukti fisik kuitansi/SPJ, namun harus tertib sesuai prosedur adminitrasi.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 pt-8 border-t border-gray-100 grid md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 p-5 rounded-2xl">
+                        <p class="font-bold text-blue-900 mb-2">Agenda Terdekat:</p>
+                        <p class="text-sm"><strong>Selasa, 10 Feb 2026:</strong> Desk Verifikasi Tahap Akhir. Pastikan seluruh dokumen diunggah maksimal Senin malam.</p>
+                    </div>
+                    <div class="bg-indigo-50 p-5 rounded-2xl">
+                        <p class="font-bold text-indigo-900 mb-2">Layanan JARING:</p>
+                        <p class="text-sm">Kanal interaksi resmi untuk konsultasi kendala teknis pelaporan dan pemahaman Juknis BKK Reforkal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Data Progres -->
+        <div id="sec-data" class="section-content hidden space-y-8">
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                <h2 class="text-xl font-bold mb-4 flex items-center text-orange-600"><i class="fas fa-cloud-upload-alt mr-2"></i> 1. Belum Mengunggah Dokumen KENES</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-slate-50">
+                            <tr>
+                                <th class="p-4 border-b">Kabupaten</th>
+                                <th class="p-4 border-b text-center">Jumlah</th>
+                                <th class="p-4 border-b">Daftar Kalurahan (Lengkap & Alfabetis)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr>
+                                <td class="p-4 font-bold">Sleman</td>
+                                <td class="p-4 text-center">15</td>
+                                <td class="p-4 text-xs">Bangunkerto, Girikerto, Minomartani, Pakembinangun, Sariharjo, Sendangadi, Sendangagung, Sendangmulyo, Sendangrejo, Sidomoyo, Tambakrejo, Tirtomartani, Trihanggo, Umbulmartani, Wukirsari.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Gunungkidul</td>
+                                <td class="p-4 text-center">1</td>
+                                <td class="p-4 text-xs font-semibold text-orange-600">Kedungkeris.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Bantul</td>
+                                <td class="p-4 text-center">0</td>
+                                <td class="p-4 text-xs text-green-600 italic">Sudah Terunggah Semua</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4 text-xs text-slate-500 italic">*Data Update: Kamis, 5 Feb 2026, 15.15 WIB</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                <h2 class="text-xl font-bold mb-4 flex items-center text-red-700"><i class="fas fa-exclamation-triangle mr-2"></i> 2. Belum Mengumpulkan LPJ BKK (Fisik)</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-slate-50">
+                            <tr>
+                                <th class="p-4 border-b">Kabupaten</th>
+                                <th class="p-4 border-b text-center">Jumlah</th>
+                                <th class="p-4 border-b">Daftar Kalurahan (Lengkap & Alfabetis)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr>
+                                <td class="p-4 font-bold">Sleman</td>
+                                <td class="p-4 text-center">45</td>
+                                <td class="p-4 text-[10px] leading-tight text-gray-600">
+                                    Argomulyo, Balecatur, Bangunkerto, Banyuraden, Bokoharjo, Candibinangun, Caturtunggal, Donoharjo, Gayamharjo, Glagaharjo, Hargobinangun, Jogotirto, Lumbungrejo, Margorejo, Merdikorejo, Minomartani, Mororejo, Nogotirto, Pakembinangun, Purwomartani, Sariharjo, Sendangagung, Sendangmulyo, Sendangrejo, Sendangsari, Sendangtirto, Sidoarum, Sidokarto, Sidomoyo, Sidomulyo, Sinduharjo, Sindumartani, Sumberagung, Sumberrahayu, Sumberejo, Tegaltirto, Tirtomartani, Tlogoadi, Tridadi, Triharjo, Trimulyo, Umbulharjo, Umbulmartani, Widodomartani, Wukirsari.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Bantul</td>
+                                <td class="p-4 text-center">8</td>
+                                <td class="p-4 text-xs">Baturetno, Pleret, Sidomulyo, Srimartani, Tamanan, Wirokerten, Wonokromo, Wonolelo.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Gunungkidul</td>
+                                <td class="p-4 text-center">4</td>
+                                <td class="p-4 text-xs">Banyusoco, Kanigoro, Kedungkeris, Natah.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Kulon Progo</td>
+                                <td class="p-4 text-center">4</td>
+                                <td class="p-4 text-xs">Banguncipto, Banjararum, Jangkaran, Kaligintung.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4 text-xs text-slate-500 italic">*Data Update: Kamis, 5 Feb 2026, 09.00 WIB</p>
+            </div>
+        </div>
+
+        <!-- Section: Unduh Berkas -->
+        <div id="sec-unduh" class="section-content hidden">
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="notula_rapat_4feb.pdf" download class="flex items-center p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group">
+                    <div class="bg-blue-100 text-blue-600 p-4 rounded-xl mr-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-file-pdf text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold">Notula Rapat Lengkap</h3>
+                        <p class="text-xs text-gray-500 italic">Hasil Kesepakatan & Detail Progres</p>
+                    </div>
+                </a>
+                <a href="paparan_kelembagaan_2026.pdf" download class="flex items-center p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group">
+                    <div class="bg-orange-100 text-orange-600 p-4 rounded-xl mr-4 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-file-powerpoint text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold">Materi Paparan (Slide)</h3>
+                        <p class="text-xs text-gray-500 italic">Transformasi Kebijakan 2025-2026</p>
+                    </div>
+                </a>
+                <a href="juknis_reforkal_2025.pdf" download class="flex items-center p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group">
+                    <div class="bg-green-100 text-green-600 p-4 rounded-xl mr-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-book text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold">Juknis BKK Reforkal 2025</h3>
+                        <p class="text-xs text-gray-500 italic">Acuan Pelaporan TA Berjalan</p>
+                    </div>
+                </a>
+                <a href="juknis_reforkal_2026.pdf" download class="flex items-center p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-300 transition-all group">
+                    <div class="bg-indigo-100 text-indigo-600 p-4 rounded-xl mr-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-book-open text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold">Juknis BKK Reforkal 2026</h3>
+                        <p class="text-xs text-gray-500 italic">Acuan Perencanaan & Pelaksanaan TA 2026</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Hotline JARING -->
+            <div class="mt-12 p-8 border-2 border-dashed border-indigo-200 rounded-3xl bg-indigo-50/50 text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-600 text-white rounded-full mb-4 shadow-lg">
+                    <i class="fas fa-headset text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-indigo-900 uppercase tracking-wide">JARING</h3>
+                <p class="text-sm text-indigo-700 font-medium mb-2">(Jalinan Rembug lan Interaksi Kalembagan)</p>
+                <p class="text-gray-600 text-sm max-w-md mx-auto mb-6">Hotline Monev Urusan Kelembagaan untuk konsultasi teknis Juknis, kendala aplikasi, dan percepatan administrasi.</p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <div class="bg-white px-6 py-3 rounded-2xl border border-indigo-100 shadow-sm">
+                        <p class="text-xs text-indigo-400 font-bold uppercase tracking-widest mb-1">Nomor Admin</p>
+                        <p class="text-lg font-mono font-bold text-indigo-900">0851-6584-9847</p>
+                    </div>
+                    <a href="https://wa.me/6285165849847" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-bold shadow-lg shadow-green-200 transition-all flex items-center group">
+                        <span>Chat via WhatsApp</span>
+                        <i class="fab fa-whatsapp ml-3 text-xl group-hover:scale-110 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-10 text-center text-slate-400 text-sm">
+        <p>&copy; 2026 Bidang Urusan Kelembagaan</p>
+        <p class="font-semibold text-slate-500 uppercase tracking-widest mt-1">Paniradya Kaistimewan DIY</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section-content').forEach(sec => sec.classList.add('hidden'));
+            document.getElementById('sec-' + sectionId).classList.remove('hidden');
+
+            document.querySelectorAll('nav button, .flex button').forEach(btn => {
+                btn.classList.remove('tab-active', 'bg-blue-900', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-900');
+            });
+            
+            const activeBtn = document.getElementById('btn-' + sectionId);
+            activeBtn.classList.add('tab-active', 'bg-blue-900', 'text-white');
+            activeBtn.classList.remove('bg-white', 'text-slate-900');
+        }
+    </script>
+</body>
+</html>
